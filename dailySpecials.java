@@ -67,7 +67,7 @@ public class dailySpecials
         else
         {
             calculation = order * Price;
-            System.out.print(order+" "+Coffee+" have been ordered totalling $");
+            System.out.print(order+" "+Coffee+"s have been ordered totalling $");
             System.out.printf("%.2f",calculation);
             System.out.println(" dollars");
         }
