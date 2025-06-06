@@ -20,8 +20,6 @@ public class dailySpecialsExtraCredit
             specials = capitalizeFirstLetter(specials);
         }
 
-        specials = capitalizeFirstLetter(specials);
-
         switch(specials)
         {
             //my cases will be the day of the week.
