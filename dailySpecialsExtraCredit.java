@@ -7,19 +7,20 @@ public class dailySpecialsExtraCredit
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter a day of the week excluding weekends Monday - Friday only!");
         specials = input.next();
+        specials = capitalizeFirstLetter(specials);
         // in the world of coffee, I need a name of a coffee beverage and a price.
         String coffee;
         double price;
         boolean saturday = false;
         boolean sunday = false;
-        while(specials.equals("Saturday") || specials.equals("saturday") || specials.equals("SATURDAY") || specials.equals("Sunday") || specials.equals("sunday") || specials.equals("SUNDAY"))
+        while(specials.equals("Saturday") || specials.equals("Sunday") )
         {
             System.out.println("Please enter a weekday, not weekend!");
             specials = input.next();
+            specials = capitalizeFirstLetter(specials);
         }
-        
-        String lowerStr = specials.toLowerCase();
-        specials = capitalizeFirstLetter(lowerStr);
+
+        specials = capitalizeFirstLetter(specials);
 
         switch(specials)
         {
@@ -58,10 +59,13 @@ public class dailySpecialsExtraCredit
 
     public static String capitalizeFirstLetter(String str)
     {
-        if (str == null || str.isEmpty()) {
+
+        if (str == null || str.isEmpty())
+        {
             return str;
         }
-        return str.substring(0, 1).toUpperCase() + str.substring(1);
+        String lowerStr = str.toLowerCase();
+        return lowerStr.substring(0, 1).toUpperCase() + lowerStr.substring(1);
     }
 
     public static void Calculate(String Coffee,String Specials, double Price)
