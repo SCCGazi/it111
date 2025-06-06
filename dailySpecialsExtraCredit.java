@@ -11,8 +11,6 @@ public class dailySpecialsExtraCredit
         // in the world of coffee, I need a name of a coffee beverage and a price.
         String coffee;
         double price;
-        boolean saturday = false;
-        boolean sunday = false;
         while(specials.equals("Saturday") || specials.equals("Sunday") )
         {
             System.out.println("Please enter a weekday, not weekend!");
