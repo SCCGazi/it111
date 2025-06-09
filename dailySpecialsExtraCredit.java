@@ -11,45 +11,53 @@ public class dailySpecialsExtraCredit
         // in the world of coffee, I need a name of a coffee beverage and a price.
         String coffee;
         double price;
-        while(specials.equals("Saturday") || specials.equals("Sunday") )
-        {
+
+        while (specials.equals("Saturday") || specials.equals("Sunday")) {
             System.out.println("Please enter a weekday, not weekend!");
             specials = input.next();
             specials = capitalizeFirstLetter(specials);
         }
 
-        switch(specials)
+        if (specials.equals("Monday") || specials.equals("Tuesday") || specials.equals("Wednesday") || specials.equals("Thursday") || specials.equals("Friday"))
         {
-            //my cases will be the day of the week.
-            case "Monday":
-                coffee = "Latte";
-                price = 4.95;
-                Calculate(coffee,specials,price);
-                break;
+            switch (specials) {
+                //my cases will be the day of the week.
+                case "Monday":
+                    coffee = "Latte";
+                    price = 4.95;
+                    Calculate(coffee, specials, price);
+                    break;
 
-            case "Tuesday":
-                coffee = "Frapp";
-                price = 5.95;
-                Calculate(coffee,specials,price);
-                break;
+                case "Tuesday":
+                    coffee = "Frapp";
+                    price = 5.95;
+                    Calculate(coffee, specials, price);
+                    break;
 
-            case "Wednesday":
-                coffee = "Cappucino";
-                price = 4.35;
-                Calculate(coffee,specials,price);
-                break;
+                case "Wednesday":
+                    coffee = "Cappucino";
+                    price = 4.35;
+                    Calculate(coffee, specials, price);
+                    break;
 
-            case "Thursday":
-                coffee = "Regular Joe";
-                price = 2.95;
-                Calculate(coffee,specials,price);
-                break;
+                case "Thursday":
+                    coffee = "Regular Joe";
+                    price = 2.95;
+                    Calculate(coffee, specials, price);
+                    break;
 
-            case "Friday":
-                coffee = "Green Tea Latte";
-                price = 6.95;
-                Calculate(coffee,specials,price);
-                break;
+                case "Friday":
+                    coffee = "Green Tea Latte";
+                    price = 6.95;
+                    Calculate(coffee, specials, price);
+                    break;
+                default:
+                    System.out.println("Please enter a valid day or check your spelling and exit, and try again!");
+            }
+        }
+        else
+        {
+            System.out.println("Please enter a valid day or check your spelling and exit, and try again!");
         }
     }
 
