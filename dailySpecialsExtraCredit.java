@@ -12,7 +12,8 @@ public class dailySpecialsExtraCredit
         String coffee;
         double price;
 
-        while (specials.equals("Saturday") || specials.equals("Sunday")) {
+        while (specials.equals("Saturday") || specials.equals("Sunday")) 
+        {
             System.out.println("Please enter a weekday, not weekend!");
             specials = input.next();
             specials = capitalizeFirstLetter(specials);
