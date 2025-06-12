@@ -67,6 +67,8 @@ public class Final
             else
             {
                 System.out.println("Please enter a valid day or check your spelling and exit, and try again!");
+                specials = input.next();
+                specials = capitalizeFirstLetter(specials);
             }
         }
     }
