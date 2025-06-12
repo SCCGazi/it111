@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class FinalSecondVersion
+public class Final
 {
     public static double discount;
 
